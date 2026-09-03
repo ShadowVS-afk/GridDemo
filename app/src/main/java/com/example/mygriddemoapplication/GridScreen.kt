@@ -168,17 +168,15 @@ private fun ImageDetailScreen(imageRes: Int, onBack: () -> Unit) {
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
-                .padding(16.dp),
+                .padding(innerPadding),
             contentAlignment = Alignment.Center
         ) {
             Image(
                 painter = painterResource(id = imageRes),
                 contentDescription = null,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(16.dp)),
-                contentScale = ContentScale.Fit
+                    .fillMaxSize(),
+                contentScale = ContentScale.Crop
             )
         }
     }
